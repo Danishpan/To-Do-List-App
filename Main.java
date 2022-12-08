@@ -774,79 +774,84 @@ public class Main {
     // System.out.println("Middle character(s) - " + findMiddleCharacters(testString));
 
 
-    Scanner sc = new Scanner(System.in);
+//     Scanner sc = new Scanner(System.in);
 
-    System.out.println("Please enter number of ToDo's you want to enter: ");
-    int numberOfToDos = sc.nextInt();
+//     System.out.println("Please enter number of ToDo's you want to enter: ");
+//     int numberOfToDos = sc.nextInt();
 
-    String[] toDos = fillToDoList(numberOfToDos);
+//     String[] toDos = fillToDoList(numberOfToDos);
 
-    boolean isRunnable = true;
+//     boolean isRunnable = true;
 
-    while(isRunnable) {
+//     while(isRunnable) {
 
-      System.out.println("Here is your to-do list: ");
+//       System.out.println("Here is your to-do list: ");
 
-      printToDoList(toDos);
+//       printToDoList(toDos);
 
-      System.out.println("Choose the index of task, which you want to mark as (completed)/(not completed) or you can enter '99' to end the program: ");
-      int index = sc.nextInt() - 1;
+//       System.out.println("Choose the index of task, which you want to mark as (completed)/(not completed) or you can enter '99' to end the program: ");
+//       int index = sc.nextInt() - 1;
 
-      if(index == 98) {
-        System.out.println("Thanks for using our app! Bye-bye!");
-        isRunnable = false;
-      } else {
-        changeToDoList(index, toDos);
-      }
+//       if(index == 98) {
+//         System.out.println("Thanks for using our app! Bye-bye!");
+//         isRunnable = false;
+//       } else {
+//         changeToDoList(index, toDos);
+//       }
 
-      isRunnable = !checkIfAllTasksAreCompleted(toDos);
-    }
+//       isRunnable = !checkIfAllTasksAreCompleted(toDos);
+//     }
+    
+    
+    System.out.println("Hello from git!");
+    
+    
   }
 
-  private static boolean checkIfAllTasksAreCompleted(String[] toDos) {
-    for (int i = 0; i < toDos.length; i++) {
-      if (!toDos[i].contains("Done")) {
-        return false;
-      }
-    }
+//   private static boolean checkIfAllTasksAreCompleted(String[] toDos) {
+//     for (int i = 0; i < toDos.length; i++) {
+//       if (!toDos[i].contains("Done")) {
+//         return false;
+//       }
+//     }
 
-    printToDoList(toDos);
-    System.out.println("You are excellent! Glad to know, that you completed all tasks for today! Thanks for using our app! Bye-bye!");
-    return true;
-  }
+//     printToDoList(toDos);
+//     System.out.println("You are excellent! Glad to know, that you completed all tasks for today! Thanks for using our app! Bye-bye!");
+//     return true;
+//   }
 
-  private static void changeToDoList(int index, String[] toDos) {
-    if (toDos[index] != null) {
-      if (toDos[index].contains("Done")) {
-        toDos[index] = toDos[index].substring(10);
-      } else {
-        toDos[index] = "(Done!) | " + toDos[index];
-      }
-    } else {
-      System.out.println("There is no To-Do with such index!");
-    }
-  }
+//   private static void changeToDoList(int index, String[] toDos) {
+//     if (toDos[index] != null) {
+//       if (toDos[index].contains("Done")) {
+//         toDos[index] = toDos[index].substring(10);
+//       } else {
+//         toDos[index] = "(Done!) | " + toDos[index];
+//       }
+//     } else {
+//       System.out.println("There is no To-Do with such index!");
+//     }
+//   }
 
-  private static void printToDoList(String[] toDos) {
-    for (int i = 0; i < toDos.length; i++) {
-      System.out.println((i + 1) + ". " + toDos[i]);
-    }
-  }
+//   private static void printToDoList(String[] toDos) {
+//     for (int i = 0; i < toDos.length; i++) {
+//       System.out.println((i + 1) + ". " + toDos[i]);
+//     }
+//   }
 
-  public static String[] fillToDoList(int numberOfToDos) {
-    String[] toDoList = new String[numberOfToDos];
+//   public static String[] fillToDoList(int numberOfToDos) {
+//     String[] toDoList = new String[numberOfToDos];
 
-    Scanner sc = new Scanner(System.in);
+//     Scanner sc = new Scanner(System.in);
 
-    for (int i = 0; i < numberOfToDos; i++) {
-      System.out.println("You still have " + (numberOfToDos - i) + " to-do's to enter.");
-      System.out.println("Please enter your to-do: ");
+//     for (int i = 0; i < numberOfToDos; i++) {
+//       System.out.println("You still have " + (numberOfToDos - i) + " to-do's to enter.");
+//       System.out.println("Please enter your to-do: ");
 
-      toDoList[i] = sc.nextLine();
-    }
+//       toDoList[i] = sc.nextLine();
+//     }
 
-    return toDoList;
-  }
+//     return toDoList;
+//   }
 
 
 
